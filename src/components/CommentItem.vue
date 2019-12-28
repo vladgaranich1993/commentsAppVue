@@ -8,10 +8,10 @@
         </div>
         <h2>{{comment.user.name}}</h2>
         <p>{{comment.content}}</p>
-        <div class="d-flex justify-content-between">
-            {{comment.createdAt}}
-            <div>
-                <button @click="$emit('add-like', comment.id)" class="btn btn-success">
+        <div>
+            <p>{{comment.createdAt}}</p>
+            <div class="mb-3 d-flex justify-content-end align-items-center">
+                <button @click="$emit('add-like', comment.id)" class="btn btn-success mr-2">
                     Like
                 </button> {{comment.likes}} likes
             </div>
@@ -43,6 +43,7 @@ export default {
         border: 1px #ccc solid;
         list-style: none;
     }
+
     .comment-item__avatar {
         width: 50px;
         height: 50px;

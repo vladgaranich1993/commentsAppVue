@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container pb-5 pt-5">
     <div id="app">
       <Header />
       <Comments :comments-list="commentsList" 
