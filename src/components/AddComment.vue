@@ -8,6 +8,7 @@
 </template>
 
 <script>
+
 export default {
     props:{
         parentId: Number
@@ -31,9 +32,10 @@ export default {
             }
             // eslint-disable-next-line
             console.warn(commentData);
-            this.$emit('create-comment',{parentId: this.parentId, commentData});
+            this.$emit('create-comment',{ parentId: this.parentId, commentData });
             this.commentText = '';
         }
     }
 }
+
 </script>
