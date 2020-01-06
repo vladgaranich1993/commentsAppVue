@@ -76,7 +76,7 @@
     methods: {
       addComment(payload) {
         if(payload.parentId) {
-          this.commentsList.map((i)=>{
+          this.commentsList.map((i)=> {
             if(i.id == payload.parentId) {
               payload.commentData.id = i.subComments.length + 1;
               i.subComments.push(payload.commentData);
@@ -87,7 +87,7 @@
           this.commentsList.push(payload.commentData);
         }
       },
-      delComment(id){
+      delComment(id) {
         this.commentsList = this.commentsList.filter(commentsList => commentsList.id !== id);
       },
       addLike(id) {

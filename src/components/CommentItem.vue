@@ -4,14 +4,14 @@
             <div class="comment-item__avatar" 
                 :style="{ backgroundImage: 'url(' + comment.user.avatar + ')' }">
             </div>
-            <button @click="$emit('del-comment', comment.id)" class="btn btn-danger">x</button>
+            <button @click="$emit('del-comment', comment.id)" class="btn btn-danger delete-button">x</button>
         </div>
         <h2>{{comment.user.name}}</h2>
         <p>{{comment.content}}</p>
         <div>
             <p>{{comment.createdAt}}</p>
             <div class="mb-3 d-flex justify-content-end align-items-center">
-                <button @click="$emit('add-like', comment.id)" class="btn btn-success mr-2">
+                <button @click="$emit('add-like', comment.id)" class="btn btn-success btn-lg mr-2">
                     Like
                 </button> {{comment.likes}} likes
             </div>
@@ -37,6 +37,12 @@ export default {
 </script>
 
 <style>
+
+    .delete-button {
+        width: 40px;
+        height: 40px;
+    }
+
     .comment-item {
         padding: 15px;
         margin-bottom: 15px;
