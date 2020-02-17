@@ -1,3 +1,6 @@
 module.exports = {
-  publicPath: '/vueCommentsApp/'
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/vueCommentsApp/'
+    : '/'
 }
+
