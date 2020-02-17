@@ -17,18 +17,18 @@
             </div>
         </div>
         <Comments :comments-list="comment.subComments" />
-        <AddComment :parent-id="comment.id"/>
+        <!-- <AddComment :parent-id="comment.id"/> -->
     </li>
 </template>
 
 <script>
 import Comments from './Comments.vue';
-import AddComment from './AddComment.vue';
+// import AddComment from './AddComment.vue';
 
 export default {
     components: {
         Comments,
-        AddComment
+        // AddComment
     },
     props: {
         comment: Object
